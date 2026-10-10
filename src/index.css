@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+  .font-outfit {
+    font-family: 'Outfit', sans-serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #070B19;
+  color: #F8F9FA;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glassmorphic Styles */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(243, 229, 171, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45), 0 0 15px 0 rgba(212, 175, 55, 0.1);
+}
+
+.glass-card {
+  background: rgba(11, 19, 43, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(243, 229, 171, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(243, 229, 171, 0.05);
+}
+
+/* Pulsing star animation */
+@keyframes starPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 12px 3px rgba(243, 229, 171, 0.6), 0 0 25px 8px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    transform: scale(1.25);
+    box-shadow: 0 0 22px 8px rgba(243, 229, 171, 0.9), 0 0 45px 15px rgba(255, 223, 0, 0.6);
+  }
+}
+
+.animate-star-pulse {
+  animation: starPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes nebulaDrift {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(3%, 4%) rotate(180deg) scale(1.1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(360deg) scale(1);
+    opacity: 0.35;
+  }
+}
+
+.animate-nebula {
+  animation: nebulaDrift 45s ease-in-out infinite alternate;
+}
+
+/* Beacon Ping ring for target star */
+@keyframes beaconRing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+.animate-beacon {
+  animation: beaconRing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Custom scrollbar for modals */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(11, 19, 43, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(243, 229, 171, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(243, 229, 171, 0.6);
+}
