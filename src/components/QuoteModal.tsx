@@ -98,17 +98,6 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
             </blockquote>
           </div>
 
-          {/* Detail Reflection */}
-          {star.detail && !isTyping && (
-            <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-xs sm:text-sm text-slate-300/85 leading-relaxed font-outfit mt-2.5 sm:mt-3 pt-2.5 sm:pt-3 border-t border-amber-300/15 max-h-[25vh] overflow-y-auto"
-            >
-              {star.detail}
-            </motion.p>
-          )}
 
           {/* Action Footer */}
           <div className="mt-5 sm:mt-6 flex flex-col-reverse sm:flex-row items-center sm:justify-between gap-3 pt-2 w-full">

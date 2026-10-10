@@ -122,17 +122,6 @@ export const CustomizeDrawer: React.FC<CustomizeDrawerProps> = ({
                       />
                     </div>
 
-                    <div>
-                      <label className="block text-[11px] text-slate-400 mb-1">
-                        Optional Detail Reflection:
-                      </label>
-                      <input
-                        type="text"
-                        value={star.detail || ''}
-                        onChange={(e) => handleStarChange(star.id, 'detail', e.target.value)}
-                        className="w-full bg-slate-800/80 border border-amber-300/20 rounded p-2 text-xs text-slate-300 focus:outline-none focus:border-amber-400"
-                      />
-                    </div>
                   </div>
                 ))}
               </div>
