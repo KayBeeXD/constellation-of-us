@@ -17,7 +17,7 @@ export const AudioControls: React.FC<AudioControlsProps> = ({
   totalCount,
 }) => {
   const [isMuted, setIsMuted] = useState(false);
-  const [volume, setVolume] = useState(0.7);
+  const [volume, setVolume] = useState(1.0);
   const [showSettings, setShowSettings] = useState(false);
   const [activeTrack, setActiveTrack] = useState(0);
 

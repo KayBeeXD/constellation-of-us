@@ -7,7 +7,7 @@ class CosmicAudioEngine {
   private isAmbientPlaying: boolean = false;
   private audioEl: HTMLAudioElement | null = null;
   private isMuted: boolean = false;
-  private volume: number = 0.7;
+  private volume: number = 1.0;
   private activeTrackIndex: number = 0;
 
   // Romantic instrumental audio tracks (Primary: from assests folder)
@@ -225,20 +225,20 @@ class CosmicAudioEngine {
   private fadeInAudio() {
     if (!this.audioEl) return;
     let v = 0;
-    const target = this.isMuted ? 0 : this.volume * 0.6;
+    const target = this.isMuted ? 0 : this.volume;
     const interval = setInterval(() => {
       if (!this.audioEl) {
         clearInterval(interval);
         return;
       }
-      v += 0.02;
+      v += 0.04;
       if (v >= target) {
         this.audioEl.volume = target;
         clearInterval(interval);
       } else {
         this.audioEl.volume = v;
       }
-    }, 50);
+    }, 40);
   }
 
   // Ethereal ambient synth pad using Web Audio API
@@ -285,7 +285,7 @@ class CosmicAudioEngine {
   public setMute(muted: boolean) {
     this.isMuted = muted;
     if (this.audioEl) {
-      this.audioEl.volume = muted ? 0 : this.volume * 0.6;
+      this.audioEl.volume = muted ? 0 : this.volume;
     }
     if (this.bgGain && this.ctx) {
       this.bgGain.gain.linearRampToValueAtTime(muted ? 0 : 0.08 * this.volume, this.ctx.currentTime + 0.3);
@@ -295,7 +295,7 @@ class CosmicAudioEngine {
   public setVolume(vol: number) {
     this.volume = vol;
     if (this.audioEl && !this.isMuted) {
-      this.audioEl.volume = vol * 0.6;
+      this.audioEl.volume = vol;
     }
     if (this.bgGain && this.ctx && !this.isMuted) {
       this.bgGain.gain.linearRampToValueAtTime(0.08 * vol, this.ctx.currentTime + 0.2);
