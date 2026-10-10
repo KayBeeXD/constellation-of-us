@@ -36,7 +36,7 @@ export const DEFAULT_STARS: StarNode[] = [
   {
     id: 5,
     name: "Anchor of My Soul",
-    quote: "In a world of constant motion, your love is my steady northern star.",
+    quote: "In a world of constant motion, you are my steady northern star.",
     detail: "No matter how turbulent the waves outside may be, holding your hand restores my peace instantly.",
     xPct: 50,
     yPct: 78,
@@ -72,7 +72,7 @@ export const DEFAULT_LOVE_LETTER: LoveLetterContent = {
 };
 
 // Storage helper functions for live customizer
-const QUOTES_STORAGE_KEY = 'constellation_us_quotes_v3';
+const QUOTES_STORAGE_KEY = 'constellation_us_quotes_v4';
 const LETTER_STORAGE_KEY = 'constellation_us_letter';
 
 export function getStoredStars(): StarNode[] {
