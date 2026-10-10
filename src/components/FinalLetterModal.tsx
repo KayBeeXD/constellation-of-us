@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { LoveLetterContent } from '../types';
 import { X } from 'lucide-react';
+import heartImg from '../assets/Heart.png';
 
 interface FinalLetterModalProps {
   letter: LoveLetterContent;
@@ -108,7 +109,7 @@ export const FinalLetterModal: React.FC<FinalLetterModalProps> = ({
               className="flex flex-col items-center justify-center my-2 sm:my-3 cursor-pointer group/heart"
             >
               <img
-                src="/glossy-heart.png"
+                src={heartImg}
                 alt="Heart"
                 className="w-20 h-20 sm:w-28 sm:h-28 object-contain drop-shadow-[0_0_35px_rgba(255,40,70,0.85)] group-hover/heart:drop-shadow-[0_0_50px_rgba(255,40,70,1)] transition-all pointer-events-none"
               />

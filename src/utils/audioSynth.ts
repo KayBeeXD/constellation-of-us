@@ -14,7 +14,7 @@ class CosmicAudioEngine {
   private tracks: { name: string; url: string }[] = [
     {
       name: "Mia & Seb's Theme (La La Land)",
-      url: "/la-la-land.mp3"
+      url: (import.meta.env.BASE_URL || './').replace(/\/$/, '') + '/la-la-land.mp3'
     },
     {
       name: "Starlight Ambient Piano",

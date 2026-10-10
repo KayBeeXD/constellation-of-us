@@ -4,6 +4,7 @@ import { Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { NorthernLightsBackground } from './NorthernLightsBackground';
 import { cosmicAudio } from '../utils/audioSynth';
+import heartImg from '../assets/Heart.png';
 
 interface EntranceCurtainProps {
   onEnter: () => void;
@@ -99,7 +100,7 @@ export const EntranceCurtain: React.FC<EntranceCurtainProps> = ({ onEnter }) => 
               >
                 {/* 3D Glossy Red Heart Asset */}
                 <img
-                  src="/glossy-heart.png"
+                  src={heartImg}
                   alt="3D Red Heart"
                   className="w-28 h-28 sm:w-44 sm:h-44 md:w-48 md:h-48 object-contain drop-shadow-[0_0_40px_rgba(255,40,70,0.85)] filter pointer-events-none select-none"
                 />
