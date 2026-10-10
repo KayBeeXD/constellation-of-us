@@ -27,8 +27,8 @@ export const DEFAULT_STARS: StarNode[] = [
   },
   {
     id: 4,
-    name: "Shared Dreams",
-    quote: "With you, even the ordinary moments turn into extraordinary cosmic poetry.",
+    name: "My Dream",
+    quote: "One day, morning will arrive and distance won’t be the first thing between us...",
     detail: "Walking beside you makes every dream feel reachable, every horizon bright and welcoming.",
     xPct: 76,
     yPct: 54,
@@ -72,7 +72,7 @@ export const DEFAULT_LOVE_LETTER: LoveLetterContent = {
 };
 
 // Storage helper functions for live customizer
-const QUOTES_STORAGE_KEY = 'constellation_us_quotes';
+const QUOTES_STORAGE_KEY = 'constellation_us_quotes_v2';
 const LETTER_STORAGE_KEY = 'constellation_us_letter';
 
 export function getStoredStars(): StarNode[] {
