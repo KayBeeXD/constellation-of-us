@@ -92,7 +92,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
             onClick={handleSkipTyping}
             title={isTyping ? "Click to show full note" : ""}
           >
-            <blockquote className="font-playfair text-lg sm:text-xl md:text-2xl leading-relaxed text-amber-100/95 italic">
+            <blockquote className="font-playfair text-lg sm:text-xl md:text-2xl leading-relaxed text-amber-100/95 italic whitespace-pre-line">
               "{displayedQuote || star.quote}"
               {isTyping && <span className="inline-block w-1.5 h-4 sm:h-5 bg-amber-300 ml-1 animate-pulse" />}
             </blockquote>

@@ -51,8 +51,8 @@ export const DEFAULT_STARS: StarNode[] = [
   },
   {
     id: 7,
-    name: "The Eternal Core",
-    quote: "You are my moon, my stars, my sun, and my entire universe wrapped into one.",
+    name: "The Eternal Tune",
+    quote: "I would never fall in love until I found her\nI said, 'I would never fall, unless it's you I fall into'...",
     detail: "Our constellation is now complete. Every line drawn leads right back to where my heart belongs.",
     xPct: 50,
     yPct: 56,
@@ -72,7 +72,7 @@ export const DEFAULT_LOVE_LETTER: LoveLetterContent = {
 };
 
 // Storage helper functions for live customizer
-const QUOTES_STORAGE_KEY = 'constellation_us_quotes_v4';
+const QUOTES_STORAGE_KEY = 'constellation_us_quotes_v5';
 const LETTER_STORAGE_KEY = 'constellation_us_letter';
 
 export function getStoredStars(): StarNode[] {
