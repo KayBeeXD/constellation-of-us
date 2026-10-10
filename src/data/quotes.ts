@@ -60,12 +60,13 @@ export const DEFAULT_STARS: StarNode[] = [
 ];
 
 export const DEFAULT_LOVE_LETTER: LoveLetterContent = {
-  title: "A Letter Written in the Stars 💫",
-  salutation: "My Dearest Love,",
+  title: "My Heart Has it",
+  salutation: "Dear Saptaparna (I'd give a nickname soon...),",
   bodyParagraphs: [
-    "As I look up at the night sky, I realize that every single star connected tonight was just a reflection of how deeply you have changed my world. Before you entered my life, the sky was just darkness and distant points of light. Now, every twinkling star carries the sound of your laughter and the warmth of your touch.",
-    "Thank you for being my haven, my greatest adventure, and my favorite place to be. You have given my days purpose and my nights comfort. In this vast, infinite cosmos, finding you is the most beautiful miracle that will ever happen to me.",
-    "Wherever the universe takes us, I promise to hold your hand, stare at the stars with you, and love you more with every passing day."
+    "I watch the way you carry your world, how hard you work, the quiet persistence you show even when the hours are relentless, and the grace with which you keep going. You might think it passes by unnoticed, but it doesn't. You inspire me every single day. I have an endless amount of awe and respect for the person you are and the spirit you carry.",
+    "You know I’m someone who would rather let actions speak than make grand declarations. Promises are easy to write down, but trust is built in the quiet showing up. Still, if there is one thing worth putting into ink, it is this: through every high and every storm, through whatever life decides to throw across our path, my hand isn't going anywhere. I am standing right beside you through thick and thin, steady and unmoved.",
+    "Whatever hills you have to climb, you’re never walking them alone. You are in my quietest thoughts, in every prayer I send upward, and in every hope I have for tomorrow.",
+    "Keep being the incredible soul you are. I’ve always got your back..."
   ],
   closing: "Forever & Always,",
   signature: "Yours, Mr. Interest ✨"
@@ -73,7 +74,7 @@ export const DEFAULT_LOVE_LETTER: LoveLetterContent = {
 
 // Storage helper functions for live customizer
 const QUOTES_STORAGE_KEY = 'constellation_us_quotes_v5';
-const LETTER_STORAGE_KEY = 'constellation_us_letter';
+const LETTER_STORAGE_KEY = 'constellation_us_letter_v2';
 
 export function getStoredStars(): StarNode[] {
   try {
